@@ -1,7 +1,7 @@
 # ContentUpload Plugin for CrafterCMS
 
 - The Content Upload plugin adds the following upload behaviors to the system:
- - Ability to place a shortcut for the upload content behavior in the sidebar and top navigation of Studio
+    - Ability to place a shortcut for the upload content behavior in the sidebar and top navigation of Studio
 
 # Installation
 

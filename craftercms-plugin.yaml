@@ -6,7 +6,7 @@ descriptorVersion: 2
 # Describe the plugin
 plugin:
   type: site
-  id: org.craftercms.plugin.uploadcontent
+  id: org.craftercms.plugin.contentupload
   name: Content Upload
   tags:
     - authoring tools
