@@ -1,0 +1,93 @@
+# This file describes a plugin for use in CrafterCMS
+
+# The version of the format for this file
+descriptorVersion: 2
+
+# Describe the plugin
+plugin:
+  type: site
+  id: org.craftercms.plugin.uploadcontent
+  name: Content Upload
+  tags:
+    - authoring tools
+  version:
+    major: 1
+    minor: 0
+    patch: 0
+  description: A plugin that allows you to set up rules for uploading content from one are of your site to another
+  documentation: "https://raw.githubusercontent.com/phuongnq/plugin-studio-content-upload/main/README.md"
+  website:
+    name: Content Upload
+    url: https://github.com/phuongnq/plugin-studio-content-upload
+  media:
+    screenshots:
+      - title: CrafterCMS
+        description: CrafterCMS Plugin for Content Upload
+        url: "https://github.com/phuongnq/plugin-studio-content-upload/main/.crafter/logo.png"
+  developer:
+    company:
+      name: Phil Nguyen
+      email: phil.nguyen@craftercms.com
+      url: https://github.com/phuongnq
+  build:
+    id: cafebabe313007x5e0481d6ba87001d0b02716f9
+    date: 2023-06-21T00:00:00Z
+  license:
+    name: MIT
+    url: https://opensource.org/licenses/MIT
+  crafterCmsVersions:
+    - major: 4
+      minor: 0
+      patch: 5
+  crafterCmsEditions:
+    - community
+    - enterprise
+  installation:
+    - type: preview-app
+      elementXpath: //widget[@id='org.craftercms.plugin.contentupload.openContentUploadPanelButton']
+      parentXpath: //widget[@id='craftercms.components.ToolsPanel']/configuration/widgets
+      element:
+        name: widget
+        attributes:
+          - name: id
+            value: org.craftercms.plugin.contentupload.openContentUploadPanelButton
+        children:
+          - name: plugin
+            attributes:
+              - name: id
+                value: org.craftercms.plugin.contentupload
+              - name: site
+                value: "{site}"
+              - name: type
+                value: apps
+              - name: name
+                value: contentupload
+              - name: file
+                value: index.js
+    - type: preview-app
+      elementXpath: //plugin[@id='org.craftercms.plugin.contentupload.openContentUploadToolbarButton']
+      parentXpath: //widget[@id='craftercms.components.PreviewToolbar']
+      element:
+        name: configuration
+        children:
+        - name: rightSection
+          children:
+          - name: widgets
+            children:
+            - name: widget
+              attributes:
+              - name: id
+                value: org.craftercms.plugin.contentupload.openContentUploadToolbarButton
+              children:
+              - name: plugin
+                attributes:
+                - name: id
+                  value: org.craftercms.plugin.contentupload
+                - name: site
+                  value: "{site}"
+                - name: type
+                  value: apps
+                - name: name
+                  value: contentupload
+                - name: file
+                  value: index.js
